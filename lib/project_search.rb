@@ -27,7 +27,7 @@ class ProjectSearch
         [scope]
     end
 
-    exts = %w(rb rjs rhtml rxml erb builder css js html).join(',')
+    exts = %w(rb rjs rhtml rxml erb builder css js html haml sass).join(',')
     globs = paths.map { |path| File.join(path, "**", "*.{#{exts}}") }
 
     globs.each do |glob|
@@ -84,7 +84,7 @@ class ProjectSearch
   name itself that you want to search.
 
   Note that only files with the following extensions are searched:
-  rb, rjs, rhtml, rxml, erb, builder, css, js, and html.
+  rb, rjs, rhtml, rxml, erb, builder, haml, css, sass, js, and html.
 
 Examples:
 
