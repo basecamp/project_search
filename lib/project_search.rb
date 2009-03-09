@@ -83,7 +83,10 @@ class ProjectSearch
   Any other scope argument is interpreted to mean the directory
   name itself that you want to search.
 
-  Examples:
+  Note that only files with the following extensions are searched:
+  rb, rjs, rhtml, rxml, erb, builder, css, js, and html.
+
+Examples:
 
     # searches all significant project directories for files that
     # contain the string "FIXME".
