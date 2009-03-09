@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+$LOAD_PATH.unshift "vendor/plugins/project_search/lib"
+require 'project_search'
+ 
+ProjectSearch.new(ARGV).search
