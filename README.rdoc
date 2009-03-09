@@ -33,7 +33,9 @@ Note that only files with the following extensions are searched:
 * rxml
 * erb
 * builder
+* haml
 * css
+* sass
 * js
 * html
 
