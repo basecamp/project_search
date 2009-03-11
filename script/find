@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-Dir.chdir(File.dirname(__FILE__) + "/..") do
+Dir.chdir(File.join(File.dirname(__FILE__), "..")) do
   $LOAD_PATH.unshift "vendor/plugins/project_search/lib"
   require 'project_search'
  
