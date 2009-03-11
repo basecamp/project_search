@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
-$LOAD_PATH.unshift "vendor/plugins/project_search/lib"
-require 'project_search'
+Dir.chdir(File.dirname(__FILE__) + "/..") do
+  $LOAD_PATH.unshift "vendor/plugins/project_search/lib"
+  require 'project_search'
  
-ProjectSearch.new(ARGV).search
+  ProjectSearch.new(ARGV).search
+end
