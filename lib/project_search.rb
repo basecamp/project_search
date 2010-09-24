@@ -34,7 +34,14 @@ class ProjectSearch
       Dir.glob(glob).each do |file|
         number = 1
         IO.foreach(file) do |line|
-          puts "%s:%d:%s" % [file, number, line] if line =~ term
+          if !line.valid_encoding?
+            Encoding.name_list.each do |encoding|
+              # try a different encoding
+              newline = line.force_encoding(encoding)
+              line = newline and break if newline.valid_encoding?
+            end
+          end
+          puts "%s:%d:%s" % [file, number, line] if line.valid_encoding? && line =~ term
           number += 1
         end
       end
