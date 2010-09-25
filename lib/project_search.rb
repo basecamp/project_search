@@ -1,5 +1,14 @@
 require 'optparse'
 
+# backwards compatibility with Ruby <1.9
+class String
+  unless "".respond_to?(:valid_encoding?)
+    def valid_encoding? 
+      true
+    end
+  end
+end
+
 class ProjectSearch
   attr_reader :arguments
   attr_reader :scope
