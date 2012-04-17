@@ -41,15 +41,17 @@ Note that only files with the following extensions are searched:
 
 Examples:
 
-  # searches all significant project directories for files that
-  # contain the string "FIXME".
-  script/find FIXME
+```bash
+# searches all significant project directories for files that
+# contain the string "FIXME".
+script/find FIXME
 
-  # searches all javascript and view files for Ajax.Request.
-  script/find js Ajax.Request
+# searches all javascript and view files for Ajax.Request.
+script/find js Ajax.Request
 
-  # searches the project's helpers for all method definitions
-  # starting with "emit_":
-  script/find helper "def emit_"
+# searches the project's helpers for all method definitions
+# starting with "emit_":
+script/find helper "def emit_"
+```
  
 Copyright (c) 2009 Jamis Buck, released under the MIT license
